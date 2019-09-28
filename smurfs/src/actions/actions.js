@@ -15,7 +15,8 @@ export const fetchSmurfs = () => {
     axios
       .get(`${URL}`)
       .then(response => {
-        dispatch({ type: FETCHED, payload: response.data });
+        dispatch({ type: FETCHED, payload: response.data })
+        console.log(response.data);
       })
       .catch(err => {
         dispatch({ type: ERROR, payload: err });
@@ -29,6 +30,7 @@ export const addSmurf = (smurf)  => {
       .post(`${URL}`, smurf)
       .then(response => {
         dispatch({ type: ADD, payload: response.data })
+        console.log(response.data);
       })
       .catch(err => {
         dispatch({ type: ERROR, payload: err });
