@@ -5,7 +5,7 @@ import {
     ADDING,
     ADD
   } 
-    from "../actions";
+    from '../actions/actions';
   
     const initialState = {
       smurfs: [],
