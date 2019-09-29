@@ -1,16 +1,14 @@
-import React, { useState, useReducer } from "react";
+import React from "react";
 
-import { smurfReducer, initialState } from "../reducers/smurfReducer";
+const Smurf = props => {
+  const currSmurf = props.value;
+  return (
+    <div className="smurf">
+      <h1>{currSmurf.name}</h1>
+      <p>Age: {currSmurf.age}</p>
+      <p>Height: {currSmurf.height}</p>
+    </div>
+  );
+};
 
-const Smurf = () => {
-    const [state, dispatch] = useReducer(titleReducer, initialTitleState);
-
-    return (
-        <div>
-            {state.name}
-            {state.height}
-            {state.age}
-        </div>
-    )
-
-}
+export default Smurf;
