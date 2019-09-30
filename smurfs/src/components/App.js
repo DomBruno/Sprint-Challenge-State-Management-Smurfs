@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.scss";
 
-import FormContext from "../contexts/formContext.js";
-import SmurfContext from "../contexts/smurfContext.js";
+import formContext from "../contexts/formContext";
+import smurfContext from "../contexts/smurfContext";
 import CurrList from "./CurrList";
 import AddForm from "./AddForm";
 

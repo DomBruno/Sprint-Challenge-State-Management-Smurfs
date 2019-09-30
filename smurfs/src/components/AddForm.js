@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import FormContext from "../contexts/formContext";
+import formContext from "../contexts/formContext";
 
 const AddForm = () => {
   const { formValue, handleChanges, newSmurf } = useContext(formContext);
   return (
       <form onSubmit={newSmurf}>
-          <p>Fill out the following info to register in the Surf Village</p>
+          <p>Fill out the following info to register in the Smurf Village</p>
           <label htmlFor="name">Name?</label>
           <input type="text" name="name" value={formValue.name} placeholder="Smurfy McSmurf-Face" onChange={handleChanges} />
           <label htmlFor="age">Age?</label>
